@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+@using (Html.BeginForm(new { ViewBag.ReturnUrl }))
+{
+    @Html.ValidationSummary()
+    @Html.AntiForgeryToken()
+
+    <div style="text-align: center;">
+
+        <h2 style="color: #991f3d;">Login</h2>
+        <div class="form-group">
+            @Html.Label("Username")
+            @Html.Editor("UserName")
+        </div>
+        <div class="form-group">
+            @Html.LabelForModel("Password")
+            @Html.Password("Password")
+        </div>
+        <input class="btn btn-primary" type="submit" value="Login" />
+    </div>
+}

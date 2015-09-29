@@ -26,7 +26,6 @@ namespace LoginApp.Controllers
             {
                 FormsAuthentication.SetAuthCookie(username, false);
                 if (!string.IsNullOrEmpty(returnUrl))
-
                     return Redirect(returnUrl);
 
                 return RedirectToAction("Index", "Home");
